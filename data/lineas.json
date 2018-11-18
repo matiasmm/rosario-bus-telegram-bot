@@ -1,0 +1,463 @@
+[
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1130",
+    "text": "101 NEGRO",
+    "value": "1"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1130",
+    "text": "101 ROJO",
+    "value": "2"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1141",
+    "text": "102 NEGRO",
+    "value": "3"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1141",
+    "text": "102 ROJO",
+    "value": "4"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1142",
+    "text": "103 NEGRO",
+    "value": "5"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1142",
+    "text": "103 ROJO",
+    "value": "6"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1143",
+    "text": "106 NEGRO",
+    "value": "7"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1143",
+    "text": "106 ROJO",
+    "value": "8"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1144",
+    "text": "107 NEGRO",
+    "value": "9"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1144",
+    "text": "107 ROJO",
+    "value": "10"
+  },
+  {
+    "identidad": "146",
+    "bandera": "UNICO",
+    "idlinea": "1145",
+    "text": "110 UNICO",
+    "value": "11"
+  },
+  {
+    "identidad": "18",
+    "bandera": "NEGRO",
+    "idlinea": "1131",
+    "text": "112 NEGRO",
+    "value": "12"
+  },
+  {
+    "identidad": "18",
+    "bandera": "ROJO",
+    "idlinea": "1131",
+    "text": "112 ROJO",
+    "value": "13"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1120",
+    "text": "113 UNICO",
+    "value": "14"
+  },
+  {
+    "identidad": "18",
+    "bandera": "AEROPUERTO",
+    "idlinea": "1132",
+    "text": "115 AEROPUERTO",
+    "value": "71"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1132",
+    "text": "115 UNICO",
+    "value": "15"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1122",
+    "text": "116 UNICO",
+    "value": "16"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1032",
+    "text": "120 UNICO",
+    "value": "17"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1121",
+    "text": "121 UNICO",
+    "value": "18"
+  },
+  {
+    "identidad": "20",
+    "bandera": "ROJO",
+    "idlinea": "1123",
+    "text": "122 ROJO",
+    "value": "19"
+  },
+  {
+    "identidad": "20",
+    "bandera": "VERDE",
+    "idlinea": "1123",
+    "text": "122 VERDE",
+    "value": "20"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1124",
+    "text": "123 UNICO",
+    "value": "21"
+  },
+  {
+    "identidad": "146",
+    "bandera": "UNICO",
+    "idlinea": "1146",
+    "text": "125 UNICO",
+    "value": "22"
+  },
+  {
+    "identidad": "18",
+    "bandera": "NEGRO",
+    "idlinea": "1133",
+    "text": "126 NEGRO",
+    "value": "23"
+  },
+  {
+    "identidad": "18",
+    "bandera": "ROJO",
+    "idlinea": "1133",
+    "text": "126 ROJO",
+    "value": "24"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1134",
+    "text": "127 UNICO",
+    "value": "25"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1147",
+    "text": "128 NEGRO",
+    "value": "26"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1147",
+    "text": "128 ROJO",
+    "value": "27"
+  },
+  {
+    "identidad": "146",
+    "bandera": "UNICO",
+    "idlinea": "1148",
+    "text": "129 UNICO",
+    "value": "28"
+  },
+  {
+    "identidad": "146",
+    "bandera": "UNICO",
+    "idlinea": "1149",
+    "text": "130 UNICO",
+    "value": "29"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1135",
+    "text": "131 UNICO",
+    "value": "30"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1136",
+    "text": "132 UNICO",
+    "value": "31"
+  },
+  {
+    "identidad": "20",
+    "bandera": "NEGRO",
+    "idlinea": "1125",
+    "text": "133 NEGRO",
+    "value": "32"
+  },
+  {
+    "identidad": "20",
+    "bandera": "VERDE",
+    "idlinea": "1125",
+    "text": "133 VERDE",
+    "value": "33"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1128",
+    "text": "134 UNICO",
+    "value": "34"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1166",
+    "text": "135 UNICO",
+    "value": "35"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1129",
+    "text": "136 UNICO",
+    "value": "36"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1167",
+    "text": "137 UNICO",
+    "value": "37"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1137",
+    "text": "138 UNICO",
+    "value": "38"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1138",
+    "text": "139 UNICO",
+    "value": "40"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1139",
+    "text": "140 UNICO",
+    "value": "43"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1140",
+    "text": "141 UNICO",
+    "value": "44"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1150",
+    "text": "142 NEGRO",
+    "value": "45"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1150",
+    "text": "142 ROJO",
+    "value": "46"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO NOCTURNO",
+    "idlinea": "1150",
+    "text": "142 ROJO NOCTURNO",
+    "value": "47"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1151",
+    "text": "143 NEGRO",
+    "value": "48"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1151",
+    "text": "143 ROJO",
+    "value": "49"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1152",
+    "text": "144 NEGRO",
+    "value": "50"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1152",
+    "text": "144 ROJO",
+    "value": "51"
+  },
+  {
+    "identidad": "146",
+    "bandera": "a Perez",
+    "idlinea": "1153",
+    "text": "145 A PEREZ",
+    "value": "53"
+  },
+  {
+    "identidad": "146",
+    "bandera": "UNICO",
+    "idlinea": "1153",
+    "text": "145 UNICO",
+    "value": "52"
+  },
+  {
+    "identidad": "146",
+    "bandera": "NEGRO",
+    "idlinea": "1154",
+    "text": "146 NEGRO",
+    "value": "54"
+  },
+  {
+    "identidad": "146",
+    "bandera": "ROJO",
+    "idlinea": "1154",
+    "text": "146 ROJO",
+    "value": "55"
+  },
+  {
+    "identidad": "20",
+    "bandera": "NEGRO",
+    "idlinea": "1126",
+    "text": "153 NEGRO",
+    "value": "56"
+  },
+  {
+    "identidad": "20",
+    "bandera": "ROJO",
+    "idlinea": "1126",
+    "text": "153 ROJO",
+    "value": "58"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1162",
+    "text": "DIFERENCIAL ROSARIO SUR UNICO",
+    "value": "99"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1449",
+    "text": "ENLACE AVELLANEDA OESTE UNICO",
+    "value": "97"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1161",
+    "text": "ENLACE IRIGOYEN UNICO",
+    "value": "72"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1160",
+    "text": "ENLACE NOROESTE UNICO",
+    "value": "69"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1158",
+    "text": "ENLACE SANTA LUCIA UNICO",
+    "value": "68"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1157",
+    "text": "ENLACE SUR UNICO",
+    "value": "67"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1164",
+    "text": "K UNICO",
+    "value": "64"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1156",
+    "text": "LINEA DE LA COSTA UNICO",
+    "value": "65"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1469",
+    "text": "Q UNICO",
+    "value": "96"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1163",
+    "text": "RONDA CUR-SUR UNICO",
+    "value": "70"
+  },
+  {
+    "identidad": "20",
+    "bandera": "UNICO",
+    "idlinea": "1155",
+    "text": "RONDA DEL CENTRO UNICO",
+    "value": "66"
+  }]
