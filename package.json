@@ -13,6 +13,7 @@
     "typescript": "^3.1.6"
   },
   "scripts": {
-    "createParadasJSON": "ts-node --project tsconfig.json src/createParadasJSON.js"
+    "createParadasJSON": "ts-node --project tsconfig.json src/build/createParadas.js",
+    "createLineasJSON": "ts-node --project tsconfig.json src/build/createLineas.js"
   }
 }
