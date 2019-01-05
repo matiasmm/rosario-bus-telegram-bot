@@ -1,13 +1,8 @@
 import * as axios from 'axios';
 import { load } from 'cheerio';
 import { urlParadas } from '../config';
-import { AllHtmlEntities } from 'html-entities';
-
 import { from } from 'rxjs';
 import { map, tap, switchMap } from 'rxjs/operators';
-
-
-const entities = new AllHtmlEntities();
 
 const lineas$ = from(axios.get(urlParadas))
   .pipe(
