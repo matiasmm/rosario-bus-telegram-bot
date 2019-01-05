@@ -135,14 +135,14 @@
   {
     "identidad": "20",
     "bandera": "ROJO",
-    "idlinea": "1123",
+    "idlinea": "1838",
     "text": "122 ROJO",
     "value": "19"
   },
   {
     "identidad": "20",
     "bandera": "VERDE",
-    "idlinea": "1123",
+    "idlinea": "1838",
     "text": "122 VERDE",
     "value": "20"
   },
@@ -289,7 +289,7 @@
   {
     "identidad": "18",
     "bandera": "UNICO",
-    "idlinea": "1140",
+    "idlinea": "1834",
     "text": "141 UNICO",
     "value": "44"
   },
@@ -397,6 +397,13 @@
     "idlinea": "1449",
     "text": "ENLACE AVELLANEDA OESTE UNICO",
     "value": "97"
+  },
+  {
+    "identidad": "18",
+    "bandera": "UNICO",
+    "idlinea": "1800",
+    "text": "ENLACE DE LOS CONSTITUYENTES UNICO",
+    "value": "73"
   },
   {
     "identidad": "18",
