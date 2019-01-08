@@ -11,6 +11,7 @@ bot.onText(/\/cuanto/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
+  console.log("hola");
 
   const chatId = msg.chat.id;
   get_user_info(chat_id, function(results) {
