@@ -526,6 +526,11 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
+mysqljs@^0.0.2-security:
+  version "0.0.2-security"
+  resolved "https://registry.yarnpkg.com/mysqljs/-/mysqljs-0.0.2-security.tgz#55010675f0df739ad9303b0e2ce4edf083b81ac0"
+  integrity sha512-VNlG53AWQflxLBOqyGEDia9yq5jtj8SX48WW6wu9AXhQArSdJ5pUHiWg6Q1FXtI0dHgz7Miempt+n2Wt4XYFbA==
+
 node-telegram-bot-api@^0.30.0:
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.30.0.tgz#17541935f2a56382d8ef7f91d9e544b530be717c"

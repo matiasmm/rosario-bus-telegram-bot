@@ -1,4 +1,4 @@
-import { get_cuanto_tengo } from './helpers';
+import { get_cuanto_tengo, get_user_info } from './helpers';
 const TelegramBot = require('node-telegram-bot-api');
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
@@ -7,19 +7,19 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const bot = new TelegramBot(BOT_TOKEN, {polling: true});
 
 // Matches "/echo [whatever]"
-bot.onText(/\/cuanto (.+)/, (msg, match) => {
+bot.onText(/\/cuanto/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
 
   const chatId = msg.chat.id;
-  const user_info = match[1].split(" ");
-  const dni = user_info[0];
-  const nro_tarjeta = user_info[1];
-  
-  get_cuanto_tengo(dni, nro_tarjeta, function(message){
-    // send back the matched "whatever" to the chat
-    bot.sendMessage(chatId, message, {parse_mode: 'Markdown'});
+  get_user_info(chat_id, function(results) {
+    const dni = results[0].dni;
+    const nro_tarjeta = results[0].nro_tarjeta;
+    get_cuanto_tengo(dni, nro_tarjeta, function(message) {
+      // send back the matched "whatever" to the chat
+      bot.sendMessage(chatId, message, {parse_mode: 'Markdown'});
+    });
   });
 
 });
