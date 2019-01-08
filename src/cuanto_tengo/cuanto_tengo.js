@@ -13,7 +13,8 @@ bot.onText(/\/cuanto (.+)/, (msg, match) => {
   // of the message
   console.log("hola");
 
-  const chatId = msg.chat.id;
+  const chat_id = msg.chat.id;
+  console.log(chat_id);
   get_user_info(chat_id, function(results) {
     const dni = results[0].dni;
     const nro_tarjeta = results[0].nro_tarjeta;
