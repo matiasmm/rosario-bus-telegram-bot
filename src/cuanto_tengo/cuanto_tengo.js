@@ -7,7 +7,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const bot = new TelegramBot(BOT_TOKEN, {polling: true});
 
 // Matches "/cuanto [whatever]"
-bot.onText(/\/cuanto (.*)/, (msg, match) => {
+bot.onText(/\/cuanto (.+)/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message

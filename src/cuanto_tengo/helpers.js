@@ -31,9 +31,10 @@ export function get_user_info(chat_id, callback) {
     var connection = mysql.createConnection(process.env.DATABASE_URL);
     connection.connect();
     connection.query('SELECT dni, nro_tarjeta FROM users WHERE chat_id = ?', [chat_id],  function (error, results, fields) {
+        console.log(results);
         if (error) console.log(error.toString());
+        callback(results);
         console.log('User found with dni: ', results[0].dni);
       });
     connection.destroy();
-    callback(results);
 }
