@@ -30,10 +30,11 @@ export function get_cuanto_tengo(dni, nro_tarjeta, callback) {
 export function get_user_info(chat_id, callback) {
     var connection = mysql.createConnection(process.env.DATABASE_URL);
     connection.connect();
-    connection.query('SELECT dni, nro_tarjeta FROM users WHERE chat_id = ?', [chat_id],  function (error, results, fields) {
+    console.log("DB connected");
+    connection.query('SELECT dni, nro_tarjeta FROM users WHERE telegram_chat_id = ?', [chat_id],  function (error, results, fields) {
+        connection.end();
+        console.log(results);
         if (error) console.log(error.toString());
-        console.log('User found with dni: ', results[0].dni);
-      });
-    connection.destroy();
-    callback(results);
+        callback(results);
+    });
 }
