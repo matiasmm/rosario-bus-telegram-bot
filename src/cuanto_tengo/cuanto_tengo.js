@@ -20,7 +20,7 @@ bot.onText(/\/cuanto (.+)/, (msg, match) => {
     const nro_tarjeta = results[0].nro_tarjeta.toString();
     get_cuanto_tengo(dni, nro_tarjeta, function(message) {
       // send back the matched "whatever" to the chat
-      bot.sendMessage(chatId, message, {parse_mode: 'Markdown'});
+      bot.sendMessage(chat_id, message, {parse_mode: 'Markdown'});
     });
   });
 
