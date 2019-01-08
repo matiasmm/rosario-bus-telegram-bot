@@ -16,8 +16,8 @@ bot.onText(/\/cuanto (.+)/, (msg, match) => {
   const chat_id = msg.chat.id;
   console.log(chat_id);
   get_user_info(chat_id, function(results) {
-    const dni = results[0].dni;
-    const nro_tarjeta = results[0].nro_tarjeta;
+    const dni = results[0].dni.toString();
+    const nro_tarjeta = results[0].nro_tarjeta.toString();
     get_cuanto_tengo(dni, nro_tarjeta, function(message) {
       // send back the matched "whatever" to the chat
       bot.sendMessage(chatId, message, {parse_mode: 'Markdown'});
