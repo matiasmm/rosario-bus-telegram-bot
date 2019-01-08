@@ -32,7 +32,7 @@ export function get_user_info(chat_id, callback) {
     connection.connect();
     console.log("DB connected");
     connection.query('SELECT dni, nro_tarjeta FROM users WHERE telegram_chat_id = ?', [chat_id],  function (error, results, fields) {
-        connection.release();
+        connection.end();
         console.log(results);
         if (error) console.log(error.toString());
         callback(results);
