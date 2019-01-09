@@ -38,3 +38,15 @@ export function get_user_info(chat_id, callback) {
         callback(results);
     });
 }
+
+export function save_user_info(chat_id, dni, nro_tarjeta, callback) {
+    var connection = mysql.createConnection(process.env.DATABASE_URL);
+    connection.connect();
+    console.log("DB connected");
+    connection.query('INSERT INTO users (telegram_chat_id, dni, nro_tarjeta) VALUES(?, ?, ?)', [chat_id, dni, nro_tarjeta],  function (error, results, fields) {
+        connection.end();
+        console.log(results);
+        if (error) console.log(error.toString());
+        callback(true);
+    });
+}
