@@ -11,8 +11,7 @@ bot.onText(/\/cuanto/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
-  const chat_id = msg.chat.id;
-  console.log(chat_id);
+  const chat_id = msg.from.id;
   get_user_info(chat_id, function(results) {
     const dni = results[0].dni.toString();
     const nro_tarjeta = results[0].nro_tarjeta.toString();
@@ -28,9 +27,7 @@ bot.onText(/\/registro (\d+) (\d+)/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
-  console.log(match);
-  const chat_id = msg.chat.id;
-  console.log(chat_id);
+  const chat_id = msg.from.id;
   const dni = match[1];
   const nro_tarjeta = match[2];
   save_user_info(chat_id, dni, nro_tarjeta, function(result) {
