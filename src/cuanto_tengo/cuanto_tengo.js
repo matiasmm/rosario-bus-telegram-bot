@@ -35,7 +35,7 @@ bot.onText(/\/registro (\d+) (\d+)/, (msg, match) => {
   const nro_tarjeta = match[2];
   save_user_info(chat_id, dni, nro_tarjeta, function(result) {
     if (result) {
-      var message = "Genial! Ahora podés consultar tu saldo mediante /cuando";
+      var message = "Genial! Ahora podés consultar tu saldo mediante /cuanto";
     } else {
       var message = "La cagaste";
     }
