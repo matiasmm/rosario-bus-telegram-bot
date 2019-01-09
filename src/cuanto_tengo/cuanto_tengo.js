@@ -6,13 +6,11 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(BOT_TOKEN, {polling: true});
 
-// Matches "/cuanto [whatever]"
-bot.onText(/\/cuanto (.+)/, (msg, match) => {
+// Matches "/cuanto"
+bot.onText(/\/cuanto/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
-  console.log("hola");
-
   const chat_id = msg.chat.id;
   console.log(chat_id);
   get_user_info(chat_id, function(results) {
