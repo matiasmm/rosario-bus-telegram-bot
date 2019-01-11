@@ -9,21 +9,17 @@ export function get_cuanto_tengo(dni, nro_tarjeta, callback) {
         if (err) {
             return console.error('upload failed:', err);
         }
-        console.log(httpResponse);
-
         console.log('Server responded with:', body);
         try {
             var fecha_hora_array = JSON.parse(body)[0]['fecha'].split("  ");
             var fecha = fecha_hora_array[0];
             var hora = fecha_hora_array[1];
             var saldo = JSON.parse(body)[0]["saldo"];
-            var mensaje = `Che, al *${fecha} ${hora}* tenés *$${saldo}* de saldo.`;
+            var response = {'fecha': fecha, 'hora': hora, 'saldo': parseFloat(saldo)};
         } catch (ex) {
-            if (body.indexOf("Espere") !== -1) {
-                var mensaje = "Esperá 20 segundos y probá de nuevo.";
-            }
+            var response = {'error': body};
         }
-        callback(mensaje);
+        callback(response);
     });
 }
 
@@ -35,7 +31,7 @@ export function get_user_info(chat_id, callback) {
         connection.end();
         console.log(results);
         if (error) console.log(error.toString());
-        callback(results);
+        callback(results[0]);
     });
 }
 
