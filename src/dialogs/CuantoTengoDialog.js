@@ -8,7 +8,7 @@ class CuantoTengoDialog extends Dialog {
         const dni = results[0].dni.toString();
         const nro_tarjeta = results[0].nro_tarjeta.toString();
         get_cuanto_tengo(dni, nro_tarjeta, function(message) {
-            bot.sendMessage(chat_id, message, {parse_mode: 'Markdown'});
+            this.bot.sendMessage(chat_id, message, {parse_mode: 'Markdown'});
         });
     });
   }
