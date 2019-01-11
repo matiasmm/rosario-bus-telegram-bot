@@ -1,5 +1,6 @@
 import { forOwn } from 'lodash';
 import { searchEsquina } from '../queries/byEsquina';
+import { cuandoLlega } from '../queries/cuandoLlegaQueries';
 import * as TelegramBot from 'node-telegram-bot-api';
 import Dialog from './Dialog';
 
@@ -10,7 +11,12 @@ class CuandoDialog extends Dialog {
       botones.push([
         {
           text: `${l.text} - ${l.destino}`,
-          callback_data: 'okis'
+          callback_data: JSON.stringify({
+            i: l.idlinea,
+            v: l.value,
+            dialog: 'CuandoDialog',
+            p: parada,
+          })
         }
       ]);
     });
@@ -26,8 +32,16 @@ class CuandoDialog extends Dialog {
         reply_markup: {
           inline_keyboard: this.makeButtons(paradas, parada.nro)
         }
-      }).then()
+      })
     );
+  }
+
+  async onCallback(msg, data) {
+    const chat_id = msg.from.id;
+    const response = await cuandoLlega(data.p, data.i, data.v)
+    response.forEach(({ text, arribo }) =>
+      this.bot.sendMessage(chat_id, `*${text}:* ${arribo} `, {
+      parse_mode: 'Markdown'}))
   }
 }
 

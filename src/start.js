@@ -13,7 +13,8 @@ new CuantoTengoDialog(bot, /\/cuanto/)
 
 new RegistroDialog(bot, /\/registro (\d+) (\d+)/)
 
-// bot.on('message', (ctx) => console.log(ctx))
+bot.on('message', (ctx) => console.log(ctx))
+
 bot.on('polling_error', (error) => {
  // console.log(error);  // => 'EFATAL'
 });
