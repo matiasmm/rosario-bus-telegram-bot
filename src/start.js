@@ -1,5 +1,6 @@
 import { get_cuanto_tengo, get_user_info, save_user_info } from './cuanto_tengo/helpers';
-import { searchEsquina } from './queries/byEsquina';
+
+import CuandoDialog from './dialogs/CuandoDialog';
 
 const TelegramBot = require('node-telegram-bot-api');
 
@@ -42,19 +43,11 @@ bot.onText(/\/registro (\d+) (\d+)/, (msg, match) => {
   });
 });
 
-bot.onText(/\/cuando (.+)/, (msg, match) => {
-  const chat_id = msg.from.id;
-  console.log(searchEsquina(match[1]))
-  bot.sendMessage(chat_id, 'test', {parse_mode: 'Markdown',
 
 
-    "reply_markup": JSON.stringify({
-      "keyboard": [
-        [{text: "Send Location", request_location: true}],
-        [{text: "Send Contact", request_contact: true}]
-      ],
-      "one_time_keyboard": true
-    })
+new CuandoDialog(bot, /\/cuando (.+)/)
 
-  });
-})
+// bot.on('message', (ctx) => console.log(ctx))
+bot.on('polling_error', (error) => {
+ // console.log(error);  // => 'EFATAL'
+});

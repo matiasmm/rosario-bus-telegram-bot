@@ -21,5 +21,8 @@
     "createParadasJSON": "ts-node --project tsconfig.json src/build/createParadas.js",
     "createLineasJSON": "ts-node --project tsconfig.json src/build/createLineas.js",
     "start": "ts-node --project tsconfig.json src/start.js"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.30.3"
   }
 }
