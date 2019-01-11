@@ -7,10 +7,11 @@ class RegistroDialog extends Dialog {
     const dni = match[1];
     const nro_tarjeta = match[2];
     save_user_info(chat_id, dni, nro_tarjeta, (result) => {
+        var message;
         if (result) {
-            const message = "Genial! Ahora podés consultar tu saldo mediante /cuanto";
+            message = "Genial! Ahora podés consultar tu saldo mediante /cuanto";
         } else {
-            const message = "La cagaste";
+            message = "La cagaste";
         }
         this.bot.sendMessage(chat_id, message, {parse_mode: 'Markdown'});
     });
