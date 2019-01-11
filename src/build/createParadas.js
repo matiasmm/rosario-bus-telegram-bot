@@ -15,7 +15,7 @@ const combined$ = from(lineas).pipe(mergeMap(linea => paradas$(linea)));
 
 const output = {};
 combined$.subscribe(
-  ({ idlinea, paradas }) => {
+  ({ idlinea, paradas, bandera }) => {
     if (!paradas || !paradas.length) {
       return;
     }
@@ -23,8 +23,12 @@ combined$.subscribe(
       parada =>
         output[parada.nro] || (output[parada.nro] = { ...parada, lineas: [] })
     );
-    paradas.forEach(({ nro }) => output[nro].lineas.push(idlinea));
+    paradas.forEach(({ nro, destino }) => output[nro].lineas.push({ idlinea, bandera, destino }));
   },
-  err => console.log('Error while creating paradas, retrying may be enough', err),
-  () => fs.writeFileSync(pathParadas, JSON.stringify(output, null, 4)) && console.log('Archivo creado'))
-
+  err =>
+    fs.writeFileSync(pathParadas, JSON.stringify(output, null, 4)) &&
+    console.log('Error while creating paradas, retrying may be enough'),
+  () =>
+    fs.writeFileSync(pathParadas, JSON.stringify(output, null, 4)) &&
+    console.log('Archivo creado')
+);
