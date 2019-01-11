@@ -27,7 +27,7 @@ class CuandoDialog extends Dialog {
     const chat_id = msg.from.id;
     const paradas = searchEsquina(match[1]);
     forOwn(paradas, parada =>
-      this.bot.sendMessage(chat_id, `Parada: ${parada.nro}`, {
+      this.bot.sendMessage(chat_id, `*Parada:* ${parada.nro} - ${parada.calles.join(',')}`, {
         parse_mode: 'Markdown',
         reply_markup: {
           inline_keyboard: this.makeButtons(paradas, parada.nro)
