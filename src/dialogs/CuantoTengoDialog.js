@@ -4,6 +4,7 @@ import Dialog from './Dialog';
 class CuantoTengoDialog extends Dialog {
   onMessage(msg, match) {
     const chat_id = msg.from.id;
+    console.log(`chat_id = ${chat_id}`);
     get_user_info(chat_id, (user) => {
         const dni = user.dni.toString();
         const nro_tarjeta = user.nro_tarjeta.toString();

@@ -15,7 +15,7 @@ export function get_cuanto_tengo(dni, nro_tarjeta, callback) {
             var fecha = fecha_hora_array[0];
             var hora = fecha_hora_array[1];
             var saldo = JSON.parse(body)[0]["saldo"];
-            var response = {'fecha': fecha, 'hora': hora, 'saldo': parseFloat(saldo)};
+            var response = {'fecha': fecha, 'hora': hora, 'saldo': parseFloat(saldo).toFixed(2)};
         } catch (ex) {
             var response = {'error': body};
         }
