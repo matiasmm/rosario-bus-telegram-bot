@@ -26,23 +26,32 @@ class CuandoDialog extends Dialog {
   onMessage(msg, match) {
     const chat_id = msg.from.id;
     const paradas = searchEsquina(match[1]);
-    forOwn(paradas, parada =>
-      this.bot.sendMessage(chat_id, `*Parada:* ${parada.nro} - ${parada.calles.join(',')}`, {
-        parse_mode: 'Markdown',
-        reply_markup: {
-          inline_keyboard: this.makeButtons(paradas, parada.nro)
-        }
-      })
-    );
+    const count = Object.keys(paradas).length
+    if (count == 0) {
+      this.bot.sendMessage(chat_id, "🤷 No encontré ninguna parada en esas calles", {
+        parse_mode: 'Markdown'})
+    } else if (count < 10) {
+      forOwn(paradas, parada =>
+        this.bot.sendMessage(chat_id, `*Parada:* ${parada.nro} - ${parada.calles.join(',')}`, {
+          parse_mode: 'Markdown',
+          reply_markup: {
+            inline_keyboard: this.makeButtons(paradas, parada.nro)
+          }
+        })
+      );
+    } else {
+      this.bot.sendMessage(chat_id, "🤷 Muchas paradas, podrías ser más especifico?", {
+        parse_mode: 'Markdown'})
+    }
   }
 
   async onCallback(msg, data) {
     const chat_id = msg.from.id;
     const response = await cuandoLlega(data.p, data.i, data.v)
-    const messages = response.map(({ text, arribo }) => `*${text}:* ${arribo} `)
-    (messages.length)?
+    const messages = response.map(({ text, arribo }) => `*${text}:* ${arribo} `);
+    messages.length?
     this.bot.sendMessage(chat_id, messages.join("\n"), {
-      parse_mode: 'Markdown'}) :     this.bot.sendMessage(chat_id, 🤷, {
+      parse_mode: 'Markdown'}) :     this.bot.sendMessage(chat_id, "🤷", {
         parse_mode: 'Markdown'})
   }
 }
