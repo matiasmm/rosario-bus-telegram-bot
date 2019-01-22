@@ -39,9 +39,11 @@ class CuandoDialog extends Dialog {
   async onCallback(msg, data) {
     const chat_id = msg.from.id;
     const response = await cuandoLlega(data.p, data.i, data.v)
-    response.forEach(({ text, arribo }) =>
-      this.bot.sendMessage(chat_id, `*${text}:* ${arribo} `, {
-      parse_mode: 'Markdown'}))
+    const messages = response.map(({ text, arribo }) => `*${text}:* ${arribo} `)
+    (messages.length)?
+    this.bot.sendMessage(chat_id, messages.join("\n"), {
+      parse_mode: 'Markdown'}) :     this.bot.sendMessage(chat_id, 🤷, {
+        parse_mode: 'Markdown'})
   }
 }
 
