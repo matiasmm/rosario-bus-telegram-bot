@@ -46,3 +46,14 @@ export function save_user_info(chat_id, dni, nro_tarjeta, callback) {
         callback(true);
     });
 }
+
+export function update_user_saldo(chat_id, saldo, notificacion_enviada) {
+    var connection = mysql.createConnection(process.env.DATABASE_URL);
+    connection.connect();
+    console.log("DB connected");
+    connection.query('UPDATE users SET ultimo_saldo = ?, notificacion_enviada= ? WHERE telegram_chat_id = ?', [saldo, notificacion_enviada, chat_id],  function (error, results, fields) {
+        connection.end();
+        console.log(results);
+        if (error) console.log(error.toString());
+    });
+}
