@@ -6,7 +6,7 @@ function sleep(ms) {
 
 export function check_cuanto_tengo(bot) {
     get_all_users_info(async (users) => {
-        for (user of users) {
+        for (const user of users) {
             console.log(`checking saldo for user with dni ${user.dni}`);
             var dni = user.dni.toString();
             var nro_tarjeta = user.nro_tarjeta.toString();
