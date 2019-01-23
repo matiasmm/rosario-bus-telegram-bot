@@ -23,6 +23,18 @@ export function get_cuanto_tengo(dni, nro_tarjeta, callback) {
     });
 }
 
+export function get_all_users_info(callback) {
+    var connection = mysql.createConnection(process.env.DATABASE_URL);
+    connection.connect();
+    console.log("DB connected");
+    connection.query('SELECT telegram_chat_id, dni, nro_tarjeta, notificacion_enviada, ultimo_saldo FROM users', function (error, results, fields) {
+        connection.end();
+        console.log(results);
+        if (error) console.log(error.toString());
+        callback(results);
+    });
+}
+
 export function get_user_info(chat_id, callback) {
     var connection = mysql.createConnection(process.env.DATABASE_URL);
     connection.connect();
