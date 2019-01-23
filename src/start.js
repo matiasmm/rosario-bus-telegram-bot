@@ -20,4 +20,4 @@ bot.on('polling_error', (error) => {
  // console.log(error);  // => 'EFATAL'
 });
 
-setInterval(() => check_cuanto_tengo(131986762), 30000);
+setInterval(() => check_cuanto_tengo(bot, 131986762), 30000);
