@@ -18,7 +18,7 @@ export const populateLineas = parada =>
   }));
 
 export const byEsquina = (query, populate = true) => {
-  const calles = normalize(query).split(/\s+y\s+/i);
+  const calles = normalize(query).split(/\s+[ye]\s+/i);
   const matches = pickBy(paradas, (parada, nro) => {
     return (
       normalize(parada.calles[0]).indexOf(calles[0]) !== -1 &&
