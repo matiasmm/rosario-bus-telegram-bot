@@ -1,8 +1,12 @@
 import { get_all_users_info, get_cuanto_tengo, update_user_saldo } from './helpers';
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export function check_cuanto_tengo(bot) {
     get_all_users_info((users) => {
-        users.forEach(setTimeout((user) => {
+        users.forEach(async (user) => {
             console.log(`checking saldo for user with dni ${user.dni}`);
             var dni = user.dni.toString();
             var nro_tarjeta = user.nro_tarjeta.toString();
@@ -22,6 +26,7 @@ export function check_cuanto_tengo(bot) {
                     console.log("no need to notify");
                 }
             });
-        }), 30000);
+            await sleep(30000);
+        });
     });
 }
