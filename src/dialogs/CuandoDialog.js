@@ -46,6 +46,7 @@ class CuandoDialog extends Dialog {
   }
 
   async onCallback(msg, data) {
+    console.log(49, msg);
     const chat_id = msg.from.id;
     const response = await cuandoLlega(data.p, data.i, data.v)
     const messages = response.map(({ text, arribo }) => `*${text}:* ${arribo} `);

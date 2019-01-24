@@ -22,3 +22,5 @@ bot.on('polling_error', (error) => {
 
 check_cuanto_tengo(bot);
 setInterval(() => check_cuanto_tengo(bot), 3600000);
+
+console.log(26, 'server started')
