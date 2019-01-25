@@ -20,7 +20,6 @@ export async function cuandoLlega(parada, idlinea, value) {
       }
     }
   );
-  console.log(23, parada, idlinea, value)
   const $ = cheerio.load(response.data);
   const table = [];
   $('table tbody tr').each((i, elem) => {
