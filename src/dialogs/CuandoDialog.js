@@ -55,6 +55,7 @@ class CuandoDialog extends Dialog {
     this.bot.sendMessage(chat_id, messages.join("\n"), {
       parse_mode: 'Markdown'}) :     this.bot.sendMessage(chat_id, "🤷", {
         parse_mode: 'Markdown'})
+    this.bot.answerCallbackQuery({callback_query_id: msg.id});
   }
 }
 
