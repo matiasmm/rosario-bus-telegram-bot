@@ -4,6 +4,9 @@ import cheerio from 'cheerio';
 import { urlComoLlego } from '../config';
 
 export async function cuandoLlega(parada, idlinea, value) {
+  console.log(`parada=${parada}&linea=${idlinea}&entidad=${
+    value
+  }&adaptado=false&accion=getSmsEfisat`);
   const response = await axios.post(
     urlComoLlego,
     `parada=${parada}&linea=${idlinea}&entidad=${
