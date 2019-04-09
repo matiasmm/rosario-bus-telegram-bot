@@ -25,8 +25,7 @@ class CuandoDialog extends Dialog {
 
   onMessage(msg, match) {
     const chat_id = msg.from.id;
-    console.log(`28 ${match}`);
-    const is_parada_number = /^[0-9]{4}$/.exec(match);
+    const is_parada_number = /^[0-9]{4}$/.exec(match[0]);
     let paradas;
     if (is_parada_number != null) {
       // Search by nro_parada
