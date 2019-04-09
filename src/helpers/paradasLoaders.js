@@ -34,11 +34,13 @@ export const byEsquina = (query, populate = true) => {
 };
 
 export const byParada = (nro_parada, populate = true) => {
+  console.log(`37 ${nro_parada}`);
   const matches = pickBy(paradas, (parada, nro) => {
     return (
       parada.nro == nro_parada
     );
   });
+  console.log(`43 ${matches}`);
   if (populate) {
     Object.keys(matches).map(function(k) {
       populateLineas(matches[k]);
