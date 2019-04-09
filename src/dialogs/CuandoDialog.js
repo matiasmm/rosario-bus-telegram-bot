@@ -29,7 +29,7 @@ class CuandoDialog extends Dialog {
     let paradas;
     if (is_parada_number != null) {
       // Search by nro_parada
-      paradas = searchParada(match[1]);
+      paradas = searchParada(match[0]);
     } else {
       // Search by calles
       paradas = searchEsquina(match[1]);
