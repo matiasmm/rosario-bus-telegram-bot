@@ -8,7 +8,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(BOT_TOKEN, {polling: true});
 
-new CuandoDialog(bot, /\/cuando (.+)/)
+new CuandoDialog(bot, /\/cuando (.+)|^[0-9]{4}$/)
 
 new CuantoTengoDialog(bot, /\/cuanto/)
 

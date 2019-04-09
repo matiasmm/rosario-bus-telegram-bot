@@ -32,3 +32,17 @@ export const byEsquina = (query, populate = true) => {
   }
   return matches;
 };
+
+export const byParada = (nro_parada, populate = true) => {
+  const matches = pickBy(paradas, (parada, nro) => {
+    return (
+      parada.nro == nro_parada
+    );
+  });
+  if (populate) {
+    Object.keys(matches).map(function(k) {
+      populateLineas(matches[k]);
+    });
+  }
+  return matches;
+};

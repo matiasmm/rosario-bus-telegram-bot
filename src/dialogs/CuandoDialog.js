@@ -1,7 +1,7 @@
 import { forOwn } from 'lodash';
-import { searchEsquina } from '../queries/byEsquina';
+import { searchEsquina, searchParada } from '../queries/byEsquina';
 import { cuandoLlega } from '../queries/cuandoLlegaQueries';
-import * as TelegramBot from 'node-telegram-bot-api';
+
 import Dialog from './Dialog';
 
 class CuandoDialog extends Dialog {
@@ -25,7 +25,15 @@ class CuandoDialog extends Dialog {
 
   onMessage(msg, match) {
     const chat_id = msg.from.id;
-    const paradas = searchEsquina(match[1]);
+    const is_parada_number = /^[0-9]{4}$/.exec(match);
+    const paradas;
+    if (is_parada_number != null) {
+      // Search by nro_parada
+      paradas = searchParada(match[1]);
+    } else {
+      // Search by calles
+      paradas = searchEsquina(match[1]);
+    }
     const count = Object.keys(paradas).length
     if (count == 0) {
       this.bot.sendMessage(chat_id, "🤷 No encontré ninguna parada en esas calles", {
