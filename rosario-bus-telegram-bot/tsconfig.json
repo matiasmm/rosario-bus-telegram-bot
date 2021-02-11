@@ -12,8 +12,13 @@
     "resolveJsonModule": true,
     "noEmit": false,
     "jsx": "preserve",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+
+    /* Added manually */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
   },
   "include": ["src"]
 }
