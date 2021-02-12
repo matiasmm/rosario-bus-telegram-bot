@@ -4,7 +4,7 @@
   "main": "src/handler.js",
   "license": "MIT",
   "scripts": {
-    "deploy:env": "sls deploy --stage $NODE_ENV",
+    "deploy:env": "sls deploy --stage $NODE_ENV --aws-profile rosario-bus-telegram-bot",
     "deploy": "export NODE_ENV=dev && yarn deploy:env --save-policy-to my-bare-minimum-permissions.json",
     "deploy:production": "export NODE_ENV=production && yarn deploy:env",
     "deploy:stage": "export NODE_ENV=stage && yarn deploy:env",
