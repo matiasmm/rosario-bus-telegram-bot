@@ -4,20 +4,24 @@ import { Document } from 'dynamoose/dist/Document';
 const { NODE_ENV } = process.env;
 if (NODE_ENV === 'DEV') {
   dynamoose.aws.ddb.local();
-} 
+}
 
 class LineaDocument extends Document {
-    id: number;
+  id: number;
 
-    identidad: number;
+  identidad: number;
 
-    bandera: string;
+  bandera: string;
 
-    idlinea: number;
+  idlinea: number;
 
-    text: string;
+  text: string;
 }
 
 export const Linea = dynamoose.model<LineaDocument>('Linea', {
-  id: Number, identidad: Number, bandera: String, idlinea: Number, text: String
+  id: Number,
+  identidad: Number,
+  bandera: String,
+  idlinea: Number,
+  text: String,
 });

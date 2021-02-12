@@ -9,8 +9,14 @@ module.exports = {
   env: { jest: true, browser: true, node: true },
   rules: { 
     'no-console': 'warn',
+    'radix': 'warn',
+    'no-unused-vars': 'warn',
+    'no-await-in-loop': 'off',
+    'no-restricted-syntax': 'off',
+    'import/prefer-default-export': 'warn',
+
     "import/extensions": [
-      "error",
+      "warn",
       "ignorePackages",
       {
         "js": "never",
