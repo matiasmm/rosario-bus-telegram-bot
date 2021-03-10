@@ -14,6 +14,8 @@ module.exports = {
     'no-await-in-loop': 'off',
     'no-restricted-syntax': 'off',
     'import/prefer-default-export': 'warn',
+    'max-classes-per-file': 'warn',
+    'max-len': 'warn',
 
     "import/extensions": [
       "warn",

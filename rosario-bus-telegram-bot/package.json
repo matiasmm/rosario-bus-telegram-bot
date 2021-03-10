@@ -63,6 +63,7 @@
     "cheerio": "^1.0.0-rc.5",
     "debug": "^4.1.1",
     "dynamoose": "^2.7.0",
+    "html-entities": "^2.1.0",
     "ramda": "^0.27.1"
   },
   "husky": {

@@ -84,6 +84,11 @@ functions:
     events:
       - schedule: rate(1 hour)
 
+  crearParadas:
+    handler: src/scripts/crearParadas.default
+    events:
+      - schedule: rate(12 hours)
+
   hello-typescript:
     handler: src/hello-ts.default
     events:
