@@ -1,4 +1,6 @@
-import { filter, map, pipe, prop, propIs } from 'ramda';
+import {
+  filter, map, pipe, prop, propIs,
+} from 'ramda';
 import { load as cheerioLoad } from 'cheerio';
 import axios from 'axios';
 import { urlParadas } from '../urls';
@@ -13,18 +15,17 @@ interface ILinea {
   text: string;
 }
 
-const lineasFromOptions = ($: cheerio.Root) =>
-  pipe(
-    map($),
-    map(($elem: cheerio.Cheerio) => ({
-      identidad: parseInt($elem.prop('identidad')),
-      bandera: $elem.prop('bandera'),
-      idlinea: parseInt($elem.prop('idlinea')),
-      text: $elem.text(),
-      id: parseInt($elem.val()),
-    })),
-    filter(propIs(String, 'bandera'))
-  )($('#linea option').toArray());
+const lineasFromOptions = ($: cheerio.Root) => pipe(
+  map($),
+  map(($elem: cheerio.Cheerio) => ({
+    identidad: parseInt($elem.prop('identidad')),
+    bandera: $elem.prop('bandera'),
+    idlinea: parseInt($elem.prop('idlinea')),
+    text: $elem.text(),
+    id: parseInt($elem.val()),
+  })),
+  filter(propIs(String, 'bandera')),
+)($('#linea option').toArray());
 
 const bodyToObjects = pipe(prop('data'), cheerioLoad, lineasFromOptions);
 
